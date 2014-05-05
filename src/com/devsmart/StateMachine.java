@@ -1,5 +1,7 @@
 package com.devsmart;
 
+import android.util.Log;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
@@ -56,7 +58,7 @@ public class StateMachine<S extends Enum<?>, I extends Enum<?>> {
             }
             notifyStateChanged(oldState, mState, input, data);
         } else {
-            throw new IllegalStateException("no possible transition from: " + mState + " with input: " + input);
+            Log.w("", "no possible transition from: " + mState + " with input: " + input);
         }
     }
 
