@@ -16,10 +16,6 @@ repositories {
   mavenCentral()
 }
 
-dependencies {
-    //compile fileTree(dir: 'libs', include: '*.jar')
-}
-
 android {
     buildToolsVersion "28.0.2"
     compileSdkVersion 17
@@ -33,6 +29,10 @@ android {
             res.srcDirs = ['res']
             assets.srcDirs = ['assets']
         }
+    }
+    lintOptions {
+        disable 'InvalidPackage','MissingTranslation','ProtectedPermissions'
+        abortOnError false
     }
 }
 
