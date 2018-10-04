@@ -16,12 +16,8 @@ repositories {
   mavenCentral()
 }
 
-dependencies {
-    //compile fileTree(dir: 'libs', include: '*.jar')
-}
-
 android {
-    buildToolsVersion "28.0.2"
+    buildToolsVersion '24.0.2'
     compileSdkVersion 17
     sourceSets {
         main {
@@ -35,5 +31,3 @@ android {
         }
     }
 }
-
-
